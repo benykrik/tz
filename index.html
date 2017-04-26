@@ -12,38 +12,32 @@
 <body>
 	
 <section id="headerfixed">
-		<div class="container">
-		<div class="burger-menu"></div>
-			<div class="row">
+	<div id="header">
+		<!--<div class="burger-menu"></div>-->
 			<h1>Autor</h1>
-				<div class="row">
-				<nav role="navigation">
-					<div class="container">
-								<ul class="list-inline">
-									<a href="#readmore">
-										<li>Home</li>
-									</a>
-									<a href="#bynow">
-										<li>Service</li>
-									</a>
-									<a href="#readmore">
-										<li>Portfolio</li>
-									</a>
-									<a href="#types">
-										<li>Team</li>
-									</a>
-									<a href="#contact">
-										<li>Blog</li>
-									</a>
-									<a href="#contact">
-										<li>Contact</li>
-									</a>
-								</ul>
-						</div>
+				<nav>
+					<ul class="list-inline">
+						<a href="#readmore">
+							<li>Home</li>
+						</a>
+						<a href="#bynow">
+							<li>Service</li>
+						</a>
+						<a href="#readmore">
+							<li>Portfolio</li>
+						</a>
+						<a href="#types">
+							<li>Team</li>
+						</a>
+						<a href="#contact">
+							<li>Blog</li>
+						</a>
+						<a href="#contact">
+							<li>Contact</li>
+						</a>
+					</ul>
 				</nav>
-			</div>
-			</div>
-		</div>
+	</div>
 </section>
 	
 <section id="readmore">
@@ -299,6 +293,9 @@
       	}, function() {
       		$(this).css({'background-color': '#788492'});
       		$(this).parent().parent().children().first().css({'background-color': '#485460'});
+      	});
+      	$('.burger-menu').click(function(e) {
+      		$(this).toggleClass('selector');
       	})
       });
     </script>

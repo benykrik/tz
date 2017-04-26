@@ -61,21 +61,23 @@ section#headerfixed {
 		position: fixed;
 		background-color: #fff;
 		z-index: 100;
-		top: 0;
-		left: 0;
 	.row {
 		background-color: #fff;
 	}
 	.list-inline {
-		position: fixed;
+		position: absolute;
+		right: 115px;
+		top: 0px;
 	}
 	h1 {
+		width: 150px;
+		margin-left: 130px;
 		padding-top: 25px;
 		color: #44c0c2;
 		font-family: 'Lobster1_4';
 		font-size: 43px;
 	}
-	.burger-menu {
+	/*.burger-menu {
 		width: 50px;
 		height: 50px;
 		position: relative;
@@ -88,9 +90,8 @@ section#headerfixed {
 	}
 	.burger-menu:hover {
 		cursor: pointer;
-	}
+	}*/
 }
-
 /*------------------------ Navigation ----------------------*/
 nav{
 
@@ -362,13 +363,6 @@ section#contact {
 		
 }
 /*------------------------ Адаптивность ----------------------*/
-@media screen and (max-width : 1182px){
-	section#headerfixed {
-		.col-md-5 {
-			// margin-left: 10px;
-		}
-	}	
-}
 
 @media(min-width: 320px) and (max-width: 360px) {
 	section#bynow {
@@ -394,15 +388,62 @@ section#types {
 	
 }
 
-@media(min-width:321px) and (max-width:480px) {
-	
+@media(min-width:320px) and (max-width:550px) {
+	section#readmore {
+		a {
+			font-size: 26px/1.5;
+			font-family: 'OpenSansSemibold';
+		}
+	color: #fff;
+		h1 {
+			font-size: 63px/1.5;
+			font-family: 'OpenSansSemibold';
+			margin-top: 139px/4;
+		}
+		h4 {
+			margin-top: 10px;
+			font-size: 23px/1.5;
+			font-family: 'OpenSansRegular'
+		}
+		.ghost-button-rounded-corners {
+			  margin-top: 75px;
+			  display: inline-block;
+			  padding: 21px 41px/1.5; 
+			  color: #fff;
+			  font-size: 20px/1.5;
+			  border: 3px solid #fff;
+			  border-radius: 6px;
+			  text-align: center;
+			  outline: none;
+			  text-decoration: none;
+		}
+		.ghost-button-rounded-corners:hover,
+		.ghost-button-rounded-corners:active {
+			  color: #49cbcd;
+			  border: 3px solid #49cbcd;
+		}
+		.row1 {
+			height: 566px/1.5;
+			background-image: url('../img/slider/1.jpg');
+		}
+		.row2 {
+			height: 566px/1.5;
+			background-image: url('../img/bgc.jpg'); 
+		}
+
+	}
 }
 
-@media(min-width:481px) and (max-width:768px) {
-	
+@media(min-width:481px) and (max-width:895px) {
+	section#headerfixed {
+		.list-inline {
+			position: absolute;
+			right: 0px;
+		}
+	}
 }
 
-@media(min-width:769px) and (max-width:992px) {
+/*@media(min-width:320px) and (max-width:778px) {
 	section#headerfixed {
 		.burger-menu {
 			display: block;
@@ -411,7 +452,7 @@ section#types {
 			display: none;
 		}
 	}
-}
+}*/
 
 @media(min-width:993px) and (max-width:1200px) {
 
