@@ -36,7 +36,7 @@
          url('fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
 }
 
-/*------------------------------- Basic -------------------------------*/
+/*---------------------------------------- Basic ------------------------------------*/
 a:hover,
 a:focus,
 a:visited,
@@ -51,50 +51,32 @@ div.container {
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.my-error-class {
-	color: red;
-}
-/*-------------------------- Header --------------------------*/
+
+/*------------------------------------ Header -------------------------------------*/
 section#headerfixed {
 		height: 103px;
 		width: 100%;
 		position: fixed;
 		background-color: #fff;
 		z-index: 100;
-	.row {
-		background-color: #fff;
-	}
 	.list-inline {
-		position: absolute;
-		right: 115px;
 		top: 0px;
+		float: right;
+		margin-right: 100px;
 	}
 	h1 {
-		width: 150px;
-		margin-left: 130px;
+		float: left;
+		width: 100px;
+		margin-left: 110px;
 		padding-top: 25px;
 		color: #44c0c2;
 		font-family: 'Lobster1_4';
 		font-size: 43px;
 	}
-	/*.burger-menu {
-		width: 50px;
-		height: 50px;
-		position: relative;
-		float: right;
-		right: 15px;
-		top: 10px;
-		background-image: url('../img/menu-512.png');
-		background-size: cover;
-		display: none;
-	}
-	.burger-menu:hover {
-		cursor: pointer;
-	}*/
 }
-/*------------------------ Navigation ----------------------*/
-nav{
 
+/*--------------------------------- Navigation ---------------------------------------*/
+nav{
 	ul.list-inline a {
 		display: inline-block;
 		padding: 39px 21px;
@@ -116,7 +98,8 @@ nav{
 		margin-bottom: 0;
 	}
 }
-/*------------------------ Slider ----------------------*/
+
+/*------------------------------------- Slider -------------------------------------*/
 section#readmore {
 		a {
 			font-size: 26px;
@@ -171,13 +154,19 @@ section#readmore {
 		}
 }
 
-/*------------------------- The Team ----------------------*/
+/*--------------------------------- The Team ---------------------------------------*/
 section#types {
-	
 	color: #7d8088;
 	margin-top: 105px;
-	.col-md-3 {
-		width: 270px;
+	.inline {
+		margin-left: 75px;
+		text-align:center;
+	}
+	.card {
+		float:left;
+		margin-bottom: 108px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	.section_header {
 		margin-bottom: 139px;
@@ -190,8 +179,7 @@ section#types {
 	}
 	h5 	{
 		margin-top: 25px;
-		margin-bottom: 110px;
-		font-size: 13px;
+		font-size: 14px;
 		font-family: 'OpenSansRegular';
 	}
 	p {
@@ -205,15 +193,19 @@ section#types {
 	}
 }
 
-/*------------------------- Buy Now ----------------------*/
+/*------------------------------------ Buy Now ------------------------------------*/
 section#bynow {
 	background-color: #f1f1f1;
-	.table {
-		margin-top: 118px;
-		margin-bottom: 100px;
+	.row {
+		margin-left: 75px;
+				margin-bottom: 100px;
+				margin-top: 118px;
 	}
-	.col-md-3{
+	.table {
 		width: 370px;
+		float: left;
+		padding-right: 16px;
+		padding-left: 16px;
 	}
 	.colup {
 		background-color: #485460;
@@ -225,9 +217,6 @@ section#bynow {
 			margin: 0;
 			font-family: 'OpenSansRegular';
 			font-size: 26px;
-		}
-		button:hover .colup {
-			background-color: #49cbcd;
 		}
 		.colup1 {
 			background-color: #f8f9fb;
@@ -271,7 +260,7 @@ section#bynow {
 		}
 }
 
-/*---------------------------- Contact ----------------------------*/
+/*------------------------------------- Contact --------------------------------------*/
 section#contact {
 		color: #ffffff;
 		h2 {
@@ -280,6 +269,17 @@ section#contact {
 		}
 		.container {
 			background: url('../img/bgc.jpg');
+		}
+		.row {
+			margin-left: 75px;
+		}
+		.info {
+			width: 438px;
+			float: left;
+		}
+		.client {
+			margin-left: 130px;
+			float: left;
 		}
 		.section_header {
 			margin-top: 100px;
@@ -314,32 +314,42 @@ section#contact {
 		.form-inline {
 			pading: 0;
 			margin-top: 115px;
+			width: 565px;
+			float: left;
+		}
+		.client-email {
+			float:left;
+			padding-left: 20px;
+		}
+		.client-name {
+			float: left;
 		}
 		#inputName {
 			font-size: 16px;
 			font-family: 'OpenSansRegular';
 			padding: 0 6px 0 6px;
 		    height: 43px;
-			width: 100%;
+		    width: 272px;
 		}
 		#inputEmail {
 			font-size: 16px;
 			font-family: 'OpenSansRegular';
 			padding: 0 6px 0 6px;
 			height: 43px;
-			width: 100%;
+			width: 272px;
 		}
 		#inputMessage {
 			font-size: 16px;
 			font-family: 'OpenSansRegular';
 			padding: 6px;
 			height: 179px;
-			width: 100%;
+			width: 565px;
 			margin-top: 30px;
 		}
 		button {
+			float:right;
 			height: 50px;
-			width: 100%;
+			width: 170px;
 			margin-top: 31px;
 			margin-bottom: 50px;
 			padding: 10px 30px;
@@ -362,30 +372,34 @@ section#contact {
 		}
 		
 }
-/*------------------------ Адаптивность ----------------------*/
+/*------------------------------------- Adaptive --------------------------------------*/
+@media(min-width: 320px) and (max-width: 750px) {
+	section#contact {
+		.row {
+			margin-left: 5px;
+		}
+		.info {
+			width: 438px;
+		}
+		.client {
+			margin-left: 5px;
+		}
+		.form-inline {
+			width: 490px;
+		}
+		.client-email {
+			padding-left: 0px;
+			margin-bottom: 10px;
+		}
+		.client-name {
+			float: left;
+			margin-bottom: 10px;
+		}
+		#inputMessage {
+			width: 485px;
 
-@media(min-width: 320px) and (max-width: 360px) {
-	section#bynow {
-		.col-md-3{
-			width: 320px;
 		}
 	}
-}
-
-@media(min-width: 320px) and (max-width: 991px) {
-section#types {
-		.col-md-3 {
-			width: 280px;
-			margin-left: 0px;
-			margin-right: 0px;
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
-}
-
-@media(min-width:0px) and (max-width:320px) {
-	
 }
 
 @media(min-width:320px) and (max-width:550px) {
@@ -432,28 +446,140 @@ section#types {
 		}
 
 	}
+	section#types {
+		margin-top: 60px;
+		.inline {
+			margin-left: 5px;
+			text-align:center;
+		}
+		.card {
+			float:left;
+			margin-bottom: 58px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	section#bynow {
+		background-color: #f1f1f1;
+		.row {
+			margin-left: 10px;
+			margin-top: 58px;
+			margin-bottom: 50px;
+		}
+		.table {
+			width: 370px;
+			float: left;
+			padding-right: 15px;
+			padding-left: 15px;
+		}
+		.colup {
+		padding: 10px 0;
+		}
+		.colup1 {
+			padding: 10px 0;
+		}
+		.col {
+			padding: 10px 0;
+		}
+		.coldown {
+			padding: 10px 0;
+			button {
+				padding: 5px 15px;
+			}
+		}
+	}
+	section#contact {
+		h2 {
+			margin-top: 20px;
+	
+			font-size: 32px;
+		}
+		.row {
+			margin-left: 5px;
+		}
+		.info {
+			width: 280px;
+		}
+		.section_header {
+			margin-top: 10px;
+		}
+		h4 {
+			margin-top: 30px;
+			margin-bottom: 8px;
+			font-size: 18px;
+		}
+		h6 {
+			padding-top: 10px;
+			font-size: 14px;
+
+		}
+		h5 {
+			font-size: 14px;
+		}
+		h3 {
+			font-size: 14px;
+		}
+		p {
+			font-size: 14px;
+		}
+		.form-inline {
+			margin-top: 10px;
+			width: 280px;
+		}
+		.client-email {
+			padding-left: 0px;
+			margin-bottom: 5px;
+		}
+		.client-name {
+			postition: relative;
+			margin-bottom: 5px;
+		}
+		#inputName {
+			font-size: 14px;
+		    height: 43px;
+		    width: 200px;
+		}
+		#inputEmail {
+			font-size: 14px;
+			height: 43px;
+			width: 200px;
+		}
+		#inputMessage {
+			margin-top: 30px;
+			font-size: 14px;
+			padding: 6px;
+			height: 100px;
+			width: 280px;
+		}
+		button {
+			height: 40px;
+			width: 100px;
+			margin-top: 15px;
+			margin-bottom: 50px;
+			padding: 10px 20px;
+			font-size: 18px;
+			font-size: 18px;
+		}
+		
+	}
+
 }
 
-@media(min-width:481px) and (max-width:895px) {
+@media (max-width:907px) {
 	section#headerfixed {
 		.list-inline {
-			position: absolute;
-			right: 0px;
+		margin-right: 10px;
+		}
+		h1 {
+		margin-left: 10px;
 		}
 	}
 }
 
-/*@media(min-width:320px) and (max-width:778px) {
+@media (max-width:680px) {
 	section#headerfixed {
-		.burger-menu {
-			display: block;
-		}
 		.list-inline {
-			display: none;
+		display: none;
 		}
 	}
-}*/
-
-@media(min-width:993px) and (max-width:1200px) {
-
 }
